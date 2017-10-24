@@ -87,6 +87,8 @@ namespace ExamKernel
         /// property by the worker method.
         /// </summary>
         private object result = null;
+        private Label progress_lbl;
+        private ProgressBar progressBar1;
 
         /// <summary>
         /// The 
@@ -440,5 +442,39 @@ namespace ExamKernel
         }
 
         #endregion
+
+        private void InitializeComponent()
+        {
+            this.progress_lbl = new System.Windows.Forms.Label();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.SuspendLayout();
+            // 
+            // progress_lbl
+            // 
+            this.progress_lbl.AutoSize = true;
+            this.progress_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.progress_lbl.Location = new System.Drawing.Point(12, 25);
+            this.progress_lbl.Name = "progress_lbl";
+            this.progress_lbl.Size = new System.Drawing.Size(291, 15);
+            this.progress_lbl.TabIndex = 0;
+            this.progress_lbl.Text = "A background operation is in progress. Please wait...";
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(12, 59);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(319, 23);
+            this.progressBar1.TabIndex = 1;
+            // 
+            // ProgressDialog
+            // 
+            this.ClientSize = new System.Drawing.Size(353, 122);
+            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.progress_lbl);
+            this.Name = "ProgressDialog";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
     }
 }
